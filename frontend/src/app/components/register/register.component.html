@@ -1,0 +1,85 @@
+
+
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  
+  <div class="body1">
+    <div class="container">
+      <div class="content">
+        <img
+          src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png"
+          alt="pin logo"
+          class="img1"
+        /><br><br>
+        <h1>User Register</h1>
+
+        <form [formGroup]="form" (submit)="registration()">
+          <div class="form-group">
+            <input
+              type="text"
+              id="username"
+              name="username"
+              formControlName="username"
+              placeholder="Enter your username"
+           
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              formControlName="fullName"
+              placeholder="Enter your fullname"
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              formControlName="email"
+
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              id="password"
+              name="password"
+              formControlName="password"
+              placeholder="Enter your password"
+            />
+          </div>
+          <!-- <p class="forgot-password">
+            <a href="#">Forgot your password?</a>
+          </p> -->
+
+          <button class="btn submit" type="submit">
+            registration
+          </button>
+        </form>
+
+        <button class="btn ggl">
+          <i class="fab fa-google"></i>
+          <span>Login with Google</span>
+        </button>
+      </div>
+      <footer>
+        <p>
+          By continuing, you agree to our's
+          <b>Terms of Service, Privacy policy.</b>
+        </p>
+        <hr />
+        <p>if u have a already Account? <a href="/login">login here</a></p>
+      </footer>
+    </div>
+  </div>
+

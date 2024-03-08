@@ -1,0 +1,90 @@
+<div *ngIf="authenticated">
+  <!-- {{message}} -->
+  <!-- <br><br> -->
+  <!-- <button class="hi" >Logout</button> -->
+
+  <header>
+    <div class="container">
+      <div class="profile">
+        <div class="profile-image">
+          <img
+            src="https://iflair.keka.com/files/3f55a6e5-296a-44b3-ae3b-533ab037d07e/200x200/profileimage/e90e89ab5fb64e50a9b71a98d1701194.jpg?1709294400000"
+            alt="myphoto"
+          />
+        </div>
+        <div class="profile-user-settings">
+          <h1 class="profile-user-name">{{ message }}</h1>
+
+          <form
+            action="/upload"
+            method="post"
+            enctype="multipart/form-data"
+            class="custom-file-upload-form"
+          >
+            <label
+              for="fileInput"
+              class="custom-file-upload btn profile-edit-btn"
+              >post</label
+            >
+            <input type="file" id="fileInput" name="file" class="input-file" />
+            <input type="submit" value="Upload" class="btn profile-edit-btn" />
+          </form>
+
+          <button class="btn profile-edit-btn" (click)="logout()">
+            logout
+          </button>
+        </div>
+
+        <div class="profile-stats">
+          <ul>
+            <li><span class="profile-stat-count">3</span> posts</li>
+            <li><span class="profile-stat-count">249</span> followers</li>
+            <li><span class="profile-stat-count">319</span> following</li>
+          </ul>
+        </div>
+
+        <div class="profile-bio">
+          <p>
+            <span class="profile-real-name">Bio:</span> Javascript Developer at
+            iflair.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="gallery">
+        <div class="gallery-item" tabindex="0">
+          <img
+            src="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=500&h=500&fit=crop"
+            class="gallery-image"
+            alt=""
+          />
+        </div>
+        <div class="gallery-item" tabindex="0">
+          <img
+            src="https://images.unsplash.com/photo-1497445462247-4330a224fdb1?w=500&h=500&fit=crop"
+            class="gallery-image"
+            alt=""
+          />
+        </div>
+        <div class="gallery-item" tabindex="0">
+          <img
+            src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&h=500&fit=crop"
+            class="gallery-image"
+            alt=""
+          />
+          <div class="gallery-item-type">
+            <span class="visually-hidden">Gallery</span
+            ><i class="fas fa-clone" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="gallery-item flex">
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </main>
+</div>
